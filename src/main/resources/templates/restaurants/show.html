@@ -126,7 +126,7 @@
 											<span class="fw-bold">定休日</span>
 										</div>
 									<div class="col">
-											<span th:text="${restaurant.getRegularHoliday()}"></span>
+											<span th:text="${restaurant.getRegularHoliday()}" id="regularHoliday"></span>
 										</div>
 									</div>
 										
@@ -157,7 +157,7 @@
 										</div>
 
 										<div class="col">
-											<span th:text="${restaurant.getCategory()}"></span>
+											<span th:text="${restaurant.getCategory().getName()}"></span>
 										</div>
 									</div>
 								</div>

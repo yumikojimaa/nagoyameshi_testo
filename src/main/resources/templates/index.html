@@ -67,108 +67,11 @@
 				<h2 class="text-center">カテゴリ検索</h2>
 				<div class="row justify-content-center mb-4">
 					<div class="col-12 col-md-8">
-						<a class="btn btn-secondary mb-2"
-							href="@{/restaurants?category_id=1"
-							role="button">居酒屋</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">焼肉</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">寿司</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">ラーメン</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">定食</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">カレー</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">喫茶店</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">中華料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">イタリア料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">フランス料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">スペイン料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">韓国料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">タイ料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">海鮮料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">ステーキ</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">ハンバーグ</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">ハンバーガー</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">そば</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">うどん</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">お好み焼き</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">たこ焼き</a>
-						<a class="btn btn-secondary mb-2"
-						
-							role="button">鍋料理</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">バー</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">パン</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">スイーツ</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">和食</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">おでん</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">焼き鳥</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">すき焼き</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">しゃぶしゃぶ</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">天ぷら</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">揚げ物</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">丼物</a>
-						<a class="btn btn-secondary mb-2"
-							
-							role="button">鉄板焼き</a>
+						<th:block th:each="category : ${categories}">
+							<a class="btn btn-secondary mb-2"
+								th:href="@{/restaurants(category_id=${category.getId()})}"
+								role="button" th:text="${category.getName()}"></a>
+						</th:block>
 					</div>
 				</div>
 		</main>
