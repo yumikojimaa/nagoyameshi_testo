@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import com.example.nagoyameshi.entity.Category;
 import com.example.nagoyameshi.entity.Restaurant;
 
 
@@ -24,6 +25,10 @@ import com.example.nagoyameshi.entity.Restaurant;
 
 	    public Page<Restaurant> findByLowestPriceLessThanEqualOrderByLowestPriceAsc(Integer price, Pageable pageable);
 
+	    public Page<Restaurant> findByCategoryOrderByCreatedAtDesc(Category categoryId, Pageable pageable);
+
+	    public Page<Restaurant> findByCategoryOrderByLowestPriceAsc(Category categoryId, Pageable pageable);
+	    
 	    public Page<Restaurant> findAllByOrderByCreatedAtDesc(Pageable pageable);
 
 	    public Page<Restaurant> findAllByOrderByLowestPriceAsc(Pageable pageable);

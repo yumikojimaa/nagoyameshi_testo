@@ -1,10 +1,11 @@
 package com.example.nagoyameshi.form;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.Data;
 
 @Data
@@ -38,6 +39,6 @@ public class RestaurantRegisterForm {
     private Integer seatingcapacity; 
     
     @NotBlank(message = "カテゴリを入力してください。")
-    private String category;
+    private Integer category;
     
 }
